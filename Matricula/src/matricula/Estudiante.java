@@ -1,5 +1,7 @@
 package matricula;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author FRANCISCO
@@ -9,7 +11,8 @@ public class Estudiante {
     private String nombre;
     private String apellido;
     private String Edad;
- 
+    
+ private ArrayList<Materia> materias;
     //Constructor Vacio
     public Estudiante (){
 
@@ -20,6 +23,7 @@ public class Estudiante {
         this.nombre = nombre;
         this.apellido = apellido;
         this.Edad = Edad;
+        this.materias=materias;
     }
     
     
@@ -47,6 +51,7 @@ public class Estudiante {
         this.Edad = Edad;
     }
 
+    
 
     @Override
     public String toString() {
@@ -55,6 +60,14 @@ public class Estudiante {
 
     public String imprimir (){
     return this.nombre + " " + this.apellido;
+    }
+
+    public ArrayList<Materia> getMaterias() {
+        return materias;
+    }
+
+    public void setMaterias(ArrayList<Materia> materias) {
+        this.materias = materias;
     }
     
     
